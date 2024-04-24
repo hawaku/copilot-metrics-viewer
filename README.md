@@ -3,13 +3,13 @@
 
 # GitHub Copilot Metrics Viewer
 <p align="center">
-  <img width="150" alt="image" src="https://github.com/github-copilot-community/copilot-metrics-viewer/assets/3329307/8473a694-217e-4aa2-a3c7-2222a321c336">
+  <img width="150" alt="image" src="https://github.com/github-copilot-resources/copilot-metrics-viewer/assets/3329307/8473a694-217e-4aa2-a3c7-2222a321c336">
 </p>
 This application displays a set of charts with various metrics related to GitHub Copilot for your <i>GitHub Organization</i>. These visualizations are designed to provide clear representations of the data, making it easy to understand and analyze the impact and adoption of GitHub Copilot. 
 
 ## Video
 
-https://github.com/github-copilot-community/copilot-metrics-viewer/assets/3329307/bc7e2a16-cc73-43c4-887a-b50809c08533
+https://github.com/github-copilot-resources/copilot-metrics-viewer/assets/3329307/bc7e2a16-cc73-43c4-887a-b50809c08533
 
 
 ## Charts
@@ -47,19 +47,19 @@ Here are the key metrics visualized in these charts:
 
 Pie charts with the top 5 languages by accepted prompts and acceptance rate are displayed at the top.
 <p align="center">
-   <img width="800" alt="image" src="https://github.com/github-copilot-community/copilot-metrics-viewer/assets/3329307/1415e6aa-87a4-4602-aac5-2525abfd9bef">
+   <img width="800" alt="image" src="https://github.com/github-copilot-resources/copilot-metrics-viewer/assets/3329307/1415e6aa-87a4-4602-aac5-2525abfd9bef">
 </p>
 
 The language breakdown analysis tab also displays a table showing the Accepted Prompts, Accepted Lines of Code, and Acceptance Rate (%) for each language over the past 28 days. The entries are sorted by the number of _accepted lines of code descending_.
 
 <p align="center">
-  <img width="800" alt="image" src="https://github.com/github-copilot-community/copilot-metrics-viewer/assets/3329307/6ce22c04-3a4f-48e4-bb3a-db9f9fd7eb95">
+  <img width="800" alt="image" src="https://github.com/github-copilot-resources/copilot-metrics-viewer/assets/3329307/6ce22c04-3a4f-48e4-bb3a-db9f9fd7eb95">
 </p>
 
 ## Copilot Chat Metrics
 
 <p align="center">
-  <img width="800" alt="image" src="https://github.com/github-copilot-community/copilot-metrics-viewer/assets/3329307/79867d5f-8933-4509-a58a-8c6deeb47536">
+  <img width="800" alt="image" src="https://github.com/github-copilot-resources/copilot-metrics-viewer/assets/3329307/79867d5f-8933-4509-a58a-8c6deeb47536">
 </p>
 
 1. **Cumulative Number of Turns:** This metric represents the total number of turns (interactions) with the Copilot over the past 28 days. A 'turn' includes both user inputs and Copilot's responses.
@@ -70,20 +70,16 @@ The language breakdown analysis tab also displays a table showing the Accepted P
 
 4. **Total Active Copilot Chat Users:** a bar chart that illustrates the total number of users who have actively interacted with Copilot over the past 28 days.
 
-## Requirements
-
-Your organization must be enrolled in the GitHub Copilot API private alpha.
-
 ## Setup instructions
 
-- Instructions on how to authenticate are provided in the API documentation - available if you have access to the private alpha.
+- Instructions on how to authenticate are provided in the [API documentation]([url](https://docs.github.com/en/enterprise-cloud@latest/rest/copilot/copilot-usage?apiVersion=2022-11-28))
 
 ### .env file setup
-- To utilize mocked data stored in a JSON file, simply set the following boolean environment variable to true:
+- To retrieve Copilot metrics via the API and display your organization's data, configure the following boolean environment variable to false:
 ```
-  VUE_APP_MOCKED_DATA=true
+  VUE_APP_MOCKED_DATA=false
 ```
-- To access Copilot metrics through the API, update your configuration by adding the following variables:
+- Additionally, update the following environment variables:
 
 ```
   VUE_APP_GITHUB_ORG=
